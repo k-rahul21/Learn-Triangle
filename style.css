@@ -25,6 +25,10 @@ body {
   font-size: 1.2rem;
 }
 
+#nav-bar {
+  margin-bottom: 0.5rem;
+}
+
 #main {
   max-width: 40vw;
   margin: auto;
@@ -98,6 +102,6 @@ input[type="radio"] {
 
 @media screen and (max-width: 600px) {
   #portfolio {
-    padding-left: 10rem;
+    padding-left: 8rem;
   }
 }
