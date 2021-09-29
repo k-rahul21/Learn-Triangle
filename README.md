@@ -8,5 +8,5 @@
 - A user can check their knowledge on topic of triangles by simply playing a simple quiz.
 - Made with HTML, CSS, VanillaJS.
 
-## Live:
-## Source: 
+## Live: https://play-with-trianglee.netlify.app
+## Source: https://github.com/k-rahul21/Learn-Triangle
