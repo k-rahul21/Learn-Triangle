@@ -95,3 +95,9 @@ input[type="radio"] {
   text-decoration: none;
   padding-left: 35rem;
 }
+
+@media screen and (max-width) {
+  #portfolio {
+    padding-left: 5rem;
+  }
+}
