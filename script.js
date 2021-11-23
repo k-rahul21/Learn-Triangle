@@ -1,8 +1,9 @@
-const angleOne = document.querySelector("#angle-one");
-const angleTwo = document.querySelector("#angle-two");
-const angleThree = document.querySelector("#angle-three");
-const buttonCheck = document.querySelector("#check-button");
+const angleOne = document.querySelector("#first");
+const angleTwo = document.querySelector("#second");
+const angleThree = document.querySelector("#third");
+const btnCheck = document.getElementById("check-button");
 const outputBox = document.querySelector("#output-box");
+
 
 const baseInput = document.querySelector("#base");
 const heightInput = document.querySelector("#height");
@@ -18,37 +19,35 @@ const formFive = document.querySelector('#five');
 const quizScore = document.querySelector('.quiz-score');
 const quizDiv = document.querySelectorAll('.quiz-wrapper');
 
-
-function toCheck()
-{
-    let angleOneValue = Number(angleOne.value);
-    let angleTwoValue = Number(angleTwo.value);
-    let angleThreeValue = Number(angleThree.value);
-    let sum = angleOneValue+angleTwoValue+angleThreeValue;
+btnCheck.addEventListener('click', ()=> {
+    let x = Number(angleOne.value);
+    let y = Number(angleTwo.value);
+    let z = Number(angleThree.value);
+    let sum = x + y + z;
     
-    if(angleOneValue === "" || angleTwoValue === "" || angleThreeValue === "")
+    if(angleOne.value === "" || angleTwo.value === "" || angleThree.value === "")
     outputBox.innerText = "Please fill all the fields...";
     else if (sum === 180)
     outputBox.innerText = "Yes,These angles can form a triangle!!";
     else
     outputBox.innerText = "oops,These angles can't form a triangle!!";
     
-}
+});
 
-function toFind()
-{
+findButton.addEventListener('click', ()=> {
     let baseValue = baseInput.value;
     let heightValue = heightInput.value;
+
     if(baseValue === "" || heightValue === "")
     hypotenuseResult.innerText = "Please Fill both the fields!!";
     else {
         let hypotenuse = Math.sqrt((baseValue * baseValue)  + (heightValue * heightValue));
         hypotenuseResult.innerText = "Hypotenuse: " + (hypotenuse).toFixed(2);
     }
-}
+});
 
-function toGetArea()
-{
+calculateButton.addEventListener('click', ()=> {
+
     let baseAreaValue = baseAreaInput.value;
     let heightAreaValue = heightAreaInput.value;
     if(baseAreaValue === "" || heightAreaValue === "")
@@ -57,7 +56,8 @@ function toGetArea()
         let area = (baseAreaValue * heightAreaValue) * 0.5;
         areaResult.innerText = "Area of the triangle is: " + area;
     }
-}
+});
+
 let correctAns = ['3', 'Obtuse', '20units', 'True', '0', 'Acute', 'Isosceles', '75°', 'Equilateral', 'No'];
 
 formFive.addEventListener('submit', function formQuiz(e) {
@@ -81,6 +81,7 @@ formFive.addEventListener('submit', function formQuiz(e) {
 });
 
 
-buttonCheck.addEventListener("click", toCheck);
-findButton.addEventListener("click",toFind);
-calculateButton.addEventListener("click", toGetArea);
+
+
+
+
